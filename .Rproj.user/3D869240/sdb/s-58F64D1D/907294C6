@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(twitteR)\nconsumer_key = \" 0dNKgfWBE8bKAcBfL8xyzhiog\"\nconsumer_secret = \"1BrIkmUDhTAA6LR0FjKz00lr9gl8fSEbHdqCTbz2lD0A9BzEWn\"\naccess_token = \"760930056487182336-dZIccBHYOKQiSNEBS48nVQYiEH5sWgR\"\naccess_secret = \"TqxhqyjUdKmEUQ8lZcuhdVSnpBLFlsmBfFtJEasGOPmXx\"\nsetup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)",
+    "created" : 1470255454704.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "184074693",
+    "id" : "907294C6",
+    "lastKnownWriteTime" : 1470255577,
+    "last_content_update" : 1470255577431,
+    "path" : "~/i_xperience/Travelbot_ix/Setup.R",
+    "project_path" : "Setup.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
