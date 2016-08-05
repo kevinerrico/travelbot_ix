@@ -1,0 +1,20 @@
+{
+  "request": {
+    "slice": [
+      {
+        "origin": "CPT",
+        "destination": "UIO",
+        "date": "2016-09-10"
+      }
+    ],
+    "passengers": {
+      "adultCount": 1,
+      "infantInLapCount": 0,
+      "infantInSeatCount": 0,
+      "childCount": 0,
+      "seniorCount": 0
+    },
+    "solutions": 20,
+    "refundable": false
+  }
+}
