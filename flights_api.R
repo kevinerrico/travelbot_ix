@@ -3,6 +3,7 @@ library(httr)
 library(dplyr)
 library(jsonlite)
 library(lubridate)
+library(readr)
 KEY = 'AIzaSyAE-ngDIn5Dau4aNCzf2FqbVeIH9iHQB9o'
 DEFAULT_ORIGIN = "CPT"
 
@@ -15,12 +16,12 @@ choose_destination <- function(){
   airport <- random_row$CODE
   return(airport)
 }
-prepare_body <- function(){
+prepare_body <- function(origin = DEFAULT_ORIGIN){
   #Get JSON object
   body <- fromJSON("request.json")
   todays_date <- today(tzone = "CET")
   flight_date <- todays_date + days(7)
-  body$request$slice$origin <- DEFAULT_ORIGIN
+  body$request$slice$origin <- origin
   body$request$slice$destination <- choose_destination()
   body$request$slice$date <- flight_date
   body$request$solutions <- 1
@@ -30,13 +31,12 @@ produce_request <- function(){
   body <- prepare_body()
   url <- sprintf("https://www.googleapis.com/qpxExpress/v1/trips/search?key=%s",KEY)
   jsonBody <- toJSON(body)
-  request <- POST(url,body=body, encode = "json",verbose())
+  request <- POST(url,body=body,encode="json",verbose())
   status <- http_status(request)
-  print(request)
   if(status$category == "Success"){
-    data <- content(request, as = "text", encoding = "UTF-8")
-    flights_data <- fromJSON(data)
-    price <- flights_data$trips$tripOption$saleTotal
-    return(price)
+    data <- content(request, as="text", encoding="UTF-8")
+    flights_obj <- fromJSON(data)
+    return(flights_obj)
   }
 }
+
