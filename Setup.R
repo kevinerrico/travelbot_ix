@@ -9,9 +9,9 @@ access_token = "760930056487182336-dZIccBHYOKQiSNEBS48nVQYiEH5sWgR"
 access_secret = "TqxhqyjUdKmEUQ8lZcuhdVSnpBLFlsmBfFtJEasGOPmXx"
 setup_twitter_oauth(api_key, api_secret, access_token, access_secret)
 #Message Templates to fill
-message1 <- "Feeling Spontaneous? don't miss this deal! Fly to %s, for just %s once of a lifetime opportunity #travel#fun"
-message2 <- "Time to travel! Your bot found a great deal to: %s. You got it just %s, #travel#botislife"
-message3  <- "Getting the hell out of town!  Go to %s,%s for just %s next week, time to rock'n roll #experiences#olympics"
+message1 <- "Feeling Spontaneous? don't miss this deal! Fly to %s, for just %s once of a lifetime opportunity #travel #fun"
+message2 <- "Time to travel! Your bot found a great deal to: %s. You got it just %s, #travel #botislife"
+message3  <- "Getting the hell out of town!  Go to %s for just %s next week, time to rock'n roll #experiences #olympics"
 messages <- list(message1,message2,message3)
 #Get our data
 airports_data <- prepare_data()
