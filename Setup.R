@@ -10,7 +10,7 @@ DEFAULT_ORIGIN = "CPT"
 
 prepare_data <- function(){
   airports <-  read.csv("Airports.csv")
-  airports <- airports %>% rename(City = `Airport location`)
+  airports <- airports %>% rename(City = Location)
   #Strip the airport name and add it as a city
   airports$City <- gsub(",.*","",airports$City)
   return(airports)
