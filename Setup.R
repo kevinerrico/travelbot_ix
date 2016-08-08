@@ -1,4 +1,3 @@
-#!/usr/bin/Rscript
 library(twitteR)
 library(jsonlite)
 library(dplyr)
@@ -23,7 +22,7 @@ prepare_data <- function(){
 
 choose_destination <- function(){
   #Dataset loading
-  dest_data <- read.csv("Airports.csv")
+  dest_data <- read_csv("Airports.csv")
   random_row <- sample_n(dest_data,1,replace = TRUE)
   #Get the airport code
   airport <- random_row$CODE
@@ -64,8 +63,8 @@ lower_case <- function(word){
     return(final)
   }
   else{
-  final <- paste(substring(word,1,1),tolower(substring(word,2)),sep="")
-  return(final)
+    final <- paste(substring(word,1,1),tolower(substring(word,2)),sep="")
+    return(final)
   }
 }
 
