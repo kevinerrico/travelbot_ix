@@ -5,4 +5,4 @@ The project aims to show data cleaning, data analysis and data scraping capabili
 Also, we have hosted the code in a AWS server that runs once every hour.
 If you have any comments or suggestions regarding this project, fork it and send us a pull request, we would love to extend it.
 
-
+Twitter Handle: @travelbot_ix
